@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1;
+  min-height: 100vh;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 2rem 5rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .box {
+    border: solid 1px black;
+    padding: 20px;
+    max-width: 200px;
+    max-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 40px;
+      max-height: 80px;
+      overflow: hidden; /* Hide overflow */
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      display: -webkit-box; /* For older WebKit-based browsers */
+      -webkit-line-clamp: 3; /* Limit to three lines */
+      -webkit-box-orient: vertical; /* Set the orientation */
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #31363f;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+
+      .editBtn:hover {
+        color: white;
+        background-color: #5bbcff;
+      }
+      .deleteBtn:hover {
+        color: white;
+        background-color: #a0153e;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    justify-content: flex-start;
+  }
+}

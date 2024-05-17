@@ -1,0 +1,58 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  width: 100%;
+  background-color: #10439f;
+  color: white;
+
+  nav {
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: none;
+      list-style: none;
+
+      .fa-plus {
+        cursor: pointer;
+      }
+    }
+    .fa-bars {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    nav {
+      padding: 1.2rem 5rem;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+
+        li {
+          font-size: 18px;
+
+          .fa-plus {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .fa-bars {
+        display: none;
+      }
+    }
+  }
+}
